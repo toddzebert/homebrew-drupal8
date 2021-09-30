@@ -2,9 +2,9 @@ class Composer1 < Formula
   desc "Dependency Manager for PHP"
   homepage "https://getcomposer.org/"
   url "https://getcomposer.org/download/1.10.22/composer.phar"
+  version "1.10.22"
   sha256 "6127ae192d3b56cd6758c7c72fe2ac6868ecc835dae1451a004aca10ab1e0700"
   license "MIT"
-  version "1.10.22"
 
   livecheck do
     url "https://github.com/composer/composer.git"
@@ -61,6 +61,6 @@ class Composer1 < Formula
     EOS
 
     system "#{bin}/composer", "install"
-    assert_match /^HelloHomebrew$/, shell_output("php tests/test.php")
+    assert_match(/^HelloHomebrew$/, shell_output("php tests/test.php"))
   end
 end
