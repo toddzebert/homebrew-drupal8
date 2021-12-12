@@ -11,7 +11,9 @@ class Composer1 < Formula
     regex(/^[\d.]+$/i)
   end
 
-  bottle :unneeded
+  # Calling bottle :unneeded is deprecated! There is no replacement.
+  # @SEE https://github.com/Homebrew/brew/pull/11239
+  # bottle :unneeded
 
   def install
     bin.install "composer.phar" => "composer"
