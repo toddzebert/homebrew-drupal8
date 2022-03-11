@@ -5,7 +5,11 @@ While originally intended to support Drupal 8 as various versions formula were r
 Currently contains these formula:
 
 * Composer v1: for use with Drupal 8 (or whatever). Composer v1 is also used with Drupal 9 although there are ~~workarounds~~ supported ways to use v2.
-* PHP v7.4: After homebrew marked it "Deprecated because it is a versioned formula!" AKA disabled.
+* *(broken, see #1)* PHP v7.4: After homebrew marked php@74  "Deprecated because it is a versioned formula!" AKA disabled.
+
+1. The PHP recipe references a manifest JSON file, that has some sort of security on it against, presumable, cross-site references. Attempting to install this formula will result in a the following issue, despite the php@74 formula actually downloading it.
+> Downloading https://ghcr.io/v2/homebrew/core/php74/manifests/7.4.28_1
+> curl: (22) The requested URL returned error: 404
 ## How do I install these formulae?
 `brew install toddzebert/drupal8/<formula>`
 
